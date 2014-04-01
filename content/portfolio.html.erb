@@ -1,0 +1,14 @@
+---
+title:         Портфолио
+menu_position: 2
+---
+
+<ul>
+	<% for image in @item.children.sort_by &:path do %>
+		<li>
+			<a href="<%= image.path %>">
+				<img src="<%= image.path rep: :thumbnail %>">
+			</a>
+		</li>
+	<% end %>
+</ul>
