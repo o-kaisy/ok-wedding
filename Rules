@@ -38,3 +38,12 @@ route '*' do
 end
 
 layout '*', :erb
+
+
+compile '/portfolio/*/', :rep => :thumbnail do
+	filter :image, geometry: '200x200'
+end
+
+route '/portfolio/*/', :rep => :thumbnail do
+	item.identifier.chop + '-thumbnail.' + item[:extension]
+end
