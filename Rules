@@ -14,26 +14,40 @@
 #   because “*” matches zero or more characters.
 
 compile '*' do
-	if item[:extension] == 'css'
-		# don’t filter stylesheets
-	elsif item.binary?
+	if item.binary?
 		# don’t filter binary items
 	else
-		filter :erb
-		layout 'default'
+		output, input = item[:extension].split '.', 2
+
+		if input
+			filter input
+		end
+
+		case output
+		when 'css'
+			# don’t process stylesheets
+		when 'html'
+			layout 'default'
+		else
+			# don’t process other files
+		end
 	end
 end
 
 route '*' do
-	if item[:extension] == 'css'
-		# Write item with identifier /foo/ to /foo.css
-		item.identifier.chop + '.css'
-	elsif item.binary?
+	if item.binary?
 		# Write item with identifier /foo/ to /foo.ext
 		item.identifier.chop + '.' + item[:extension]
 	else
-		# Write item with identifier /foo/ to /foo/index.html
-		item.identifier + 'index.html'
+		output, input = item[:extension].split '.', 2
+
+		case output
+		when 'html'
+			# Write item with identifier /foo/ to /foo/index.html
+			item.identifier + 'index.' + output
+		else
+			item.identifier.chop + '.' + output
+		end
 	end
 end
 
