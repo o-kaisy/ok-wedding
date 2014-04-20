@@ -4,7 +4,7 @@
 		%meta{ charset: 'utf-8' }
 
 		%title
-			= [ @item[:title] ].compact * ' - ' # TODO: add a site title
+			= [ @item[:title], 'Свадебное фото', 'Оксана Красникова' ].compact * ' - '
 
 		%link{ rel: 'stylesheet', href: '/stylesheet.css' }
 		%link{ rel: 'icon',       href: '/favicon.ico'    }
@@ -36,4 +36,5 @@
 		%footer
 			%small.copyright
 				©
-				= [ 2014, Time.now.year ].uniq * '-'
+				= [ 2006, Time.now.year ].uniq * '-'
+				Оксана Красникова
