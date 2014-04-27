@@ -14,3 +14,15 @@ menu_position: 0
 	Пусть свадебный день будет по-настоящему вашим днем!
 	Ведь каждая пара – жених и невеста – уникальна.
 	И каждый свадебный альбом, как и каждая свадьба, неповторимы!
+
+
+%ul.galleria
+	= list_of @items.select{ |item| item.path.split('/')[1] == 'index' }.sort_by &:path do |image|
+		%img{ src: image.path }
+
+:coffee
+	Galleria.loadTheme '/galleria/themes/classic/galleria.classic.min.js'
+	Galleria.run '.galleria', {
+		# put options here (see http://galleria.io/docs/options/)
+		autoplay: true
+	}
