@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-size: 14pt; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  display: block; }
+
+main {
+  margin: 0 20%; }
+  main h1 {
+    text-align: center;
+    font-family: sans-serif; }
+  main p {
+    text-align: justify; }
+  main .galleria {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    padding: 0; }
+
+nav {
+  position: fixed;
+  top: 1em;
+  left: 0;
+  width: 15%;
+  margin: 0 20px;
+  font-size: 150%;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  line-height: 1.5; }
+  nav ul {
+    margin: 0;
+    padding: 0; }
+  nav li {
+    list-style: none;
+    text-align: right;
+    font-weight: bold; }
+    nav li:first-child {
+      font-size: 150%; }
+    nav li a {
+      text-decoration: none;
+      font-weight: normal; }
+
+footer {
+  margin: 2em 20% 0; }
+  footer .copyright {
+    font-style: italic; }
