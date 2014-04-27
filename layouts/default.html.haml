@@ -27,11 +27,12 @@
 		%nav
 			%ul
 				= list_of @items.select { |i| i[:menu_position] }.sort_by { |i| i[:menu_position] } do |item|
+					- title = item[:title] || { '/' => '⌂' }[item.path]
 					- if item == @item
-						= item[:title]
+						= title
 					- else
 						%a{ href: item.path }
-							= item[:title]
+							= title
 
 		%footer
 			%small.copyright
