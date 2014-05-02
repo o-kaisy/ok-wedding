@@ -18,7 +18,7 @@
 	%body
 		%header
 
-		%main
+		%main{ class: { '/' => 'index' }[@item.path] || @item.path.split('/').reject(&:empty?) }
 			- if @item[:title]
 				%h1= @item[:title]
 
