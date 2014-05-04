@@ -60,6 +60,8 @@ main {
         background-color: black; }
         main .galleria .galleria-container .galleria-image-nav-left:hover, main .galleria .galleria-container .galleria-image-nav-right:hover, main .galleria .galleria-container .galleria-thumb-nav-left:hover, main .galleria .galleria-container .galleria-thumb-nav-right:hover {
           opacity: 0.7; }
+  main.index .galleria-thumbnails-container {
+    display: none; }
 
 nav {
   position: fixed;
