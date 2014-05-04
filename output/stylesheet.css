@@ -19,13 +19,16 @@ main {
   main h1 {
     text-align: center;
     font-family: sans-serif; }
-  main p {
+  main p, main dl, main > ol, main > ul {
     text-align: justify; }
-    main p a {
+    main p a, main dl a, main > ol a, main > ul a {
       text-decoration: none;
       font-weight: bold; }
-      main p a:hover {
+      main p a:hover, main dl a:hover, main > ol a:hover, main > ul a:hover {
         text-decoration: underline; }
+  main p.standalone {
+    font-size: 150%;
+    text-align: center; }
   main .galleria {
     width: 800px;
     height: 600px;
@@ -34,8 +37,29 @@ main {
     main .galleria .galleria-container {
       background: white;
       box-shadow: 0 0 15px gray; }
+      main .galleria .galleria-container .galleria-image-nav {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+        padding-right: 10px; }
+        main .galleria .galleria-container .galleria-image-nav-left, main .galleria .galleria-container .galleria-image-nav-right {
+          width: 60px; }
+        main .galleria .galleria-container .galleria-image-nav-left {
+          border-radius: 0 50% 50% 0;
+          background-position: 10px 46px; }
+        main .galleria .galleria-container .galleria-image-nav-right {
+          border-radius: 50% 0 0 50%;
+          background-position: -264px 46px; }
+      main .galleria .galleria-container .galleria-carousel .galleria-image {
+        border: none; }
+      main .galleria .galleria-container .galleria-carousel .galleria-thumb-nav-left {
+        border-radius: 50% 0 0 50%; }
+      main .galleria .galleria-container .galleria-carousel .galleria-thumb-nav-right {
+        border-radius: 0 50% 50% 0; }
       main .galleria .galleria-container .galleria-image-nav-left, main .galleria .galleria-container .galleria-image-nav-right, main .galleria .galleria-container .galleria-thumb-nav-left, main .galleria .galleria-container .galleria-thumb-nav-right {
         background-color: black; }
+        main .galleria .galleria-container .galleria-image-nav-left:hover, main .galleria .galleria-container .galleria-image-nav-right:hover, main .galleria .galleria-container .galleria-thumb-nav-left:hover, main .galleria .galleria-container .galleria-thumb-nav-right:hover {
+          opacity: 0.7; }
 
 nav {
   position: fixed;
@@ -73,6 +97,6 @@ nav {
         margin-left: 0.5em; }
 
 footer {
-  margin: 2em 20% 0; }
+  margin: 2em 20% 1em; }
   footer .copyright {
     font-style: italic; }
