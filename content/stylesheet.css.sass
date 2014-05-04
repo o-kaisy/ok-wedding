@@ -2,7 +2,7 @@ body
 	margin:    0
 	padding:   0
 	background:
-		color: #FFF
+		color: lightGoldenRodYellow
 
 	font:
 		size: 14pt
@@ -11,6 +11,12 @@ body
 h1, h2, h3, h4, h5, h6
 	small
 		display: block
+
+a[href]
+	color: goldenRod
+
+small
+	color: gray
 
 
 header
@@ -38,6 +44,14 @@ main
 		height:  600px
 		margin:  auto
 		padding: 0
+
+		.galleria-container
+			background: white
+			box-shadow: 0 0 15px gray
+
+			.galleria-image-nav, .galleria-thumb-nav
+				&-left, &-right
+					background-color: black
 
 
 nav
