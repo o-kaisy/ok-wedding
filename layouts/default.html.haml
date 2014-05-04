@@ -22,6 +22,8 @@
 			- if @item[:title]
 				%h1= @item[:title]
 
+			%nav
+
 			= yield
 
 		%nav
@@ -39,3 +41,25 @@
 				©
 				= [ 2006, Time.now.year ].uniq * '-'
 				Оксана Красникова
+
+
+		:coffee
+			container       = $ 'main > nav'
+			container_level = 0
+
+			$('h2, h3').each (i, header) ->
+				level = parseInt header.nodeName.replace /\D+/g, ''
+				link  = $(header).children('a')[0]
+
+				if level > container_level
+					container = $('<ul></ul>').appendTo container
+				else
+					console.log container_level-level
+					console.log container = container.parent() for i in [0..2*(container_level-level)]
+
+				container_level = level
+
+				container = $('<li></li>').appendTo(container).append if link
+					$ "<a href='#\#{link.name}'>\#{link.text}</a>"
+				else
+					$ "<span>\#{$(header).text()}</span>"

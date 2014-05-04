@@ -159,6 +159,29 @@ nav
 						position:    absolute
 						margin-left: 0.5em
 
+	main > &
+		top:   3em
+		right: 0
+
+		li
+			color: gray
+
+			margin-left:      1em
+			a, span
+				margin-left: -1em
+
+			a
+				&:hover
+					border-bottom: 1px dashed
+
+		> ul > li
+			font:
+				variant: small-caps
+
+			> ul > li
+				font:
+					variant: normal
+
 
 footer
 	margin: 2em 20% 1em

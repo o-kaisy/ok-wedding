@@ -15,6 +15,7 @@
     <header></header>
     <main class='about'>
       <h1>О фотографе</h1>
+      <nav></nav>
       <p>
         Я рада, что Вы посетили страничку с моими свадебными работами.
         Фотография — мое увлечение и профессия. Свадебным фото я занимаюсь с 2002 года.
@@ -83,5 +84,31 @@
         Оксана Красникова
       </small>
     </footer>
+    <script>
+      (function() {
+        var container, container_level;
+      
+        container = $('main > nav');
+      
+        container_level = 0;
+      
+        $('h2, h3').each(function(i, header) {
+          var level, link, _i, _ref;
+          level = parseInt(header.nodeName.replace(/\D+/g, ''));
+          link = $(header).children('a')[0];
+          if (level > container_level) {
+            container = $('<ul></ul>').appendTo(container);
+          } else {
+            console.log(container_level - level);
+            for (i = _i = 0, _ref = 2 * (container_level - level); 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+              console.log(container = container.parent());
+            }
+          }
+          container_level = level;
+          return container = $('<li></li>').appendTo(container).append(link ? $("<a href='#" + link.name + "'>" + link.text + "</a>") : $("<span>" + ($(header).text()) + "</span>"));
+        });
+      
+      }).call(this);
+    </script>
   </body>
 </html>

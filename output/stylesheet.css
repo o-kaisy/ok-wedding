@@ -108,6 +108,20 @@ nav {
         content: "←";
         position: absolute;
         margin-left: 0.5em; }
+  main > nav {
+    top: 3em;
+    right: 0; }
+    main > nav li {
+      color: gray;
+      margin-left: 1em; }
+      main > nav li a, main > nav li span {
+        margin-left: -1em; }
+      main > nav li a:hover {
+        border-bottom: 1px dashed; }
+    main > nav > ul > li {
+      font-variant: small-caps; }
+      main > nav > ul > li > ul > li {
+        font-variant: normal; }
 
 footer {
   margin: 2em 20% 1em; }
