@@ -1,8 +1,20 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Linux Biolinum";
+  src: url("/fonts/LinBiolinum_R.otf"); }
+@font-face {
+  font-family: "Linux Biolinum";
+  font-weight: bold;
+  src: url("/fonts/LinBiolinum_RB.otf"); }
+@font-face {
+  font-family: "Linux Biolinum";
+  font-style: italic;
+  src: url("/fonts/LinBiolinum_RI.otf"); }
 body {
   margin: 0;
   padding: 0;
   background-color: lightgoldenrodyellow;
+  font-family: "Linux Biolinum";
   font-size: 14pt; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -17,8 +29,7 @@ small {
 main {
   margin: 0 20%; }
   main h1 {
-    text-align: center;
-    font-family: sans-serif; }
+    text-align: center; }
   main p, main dl, main > ol, main > ul {
     text-align: justify; }
     main p a, main dl a, main > ol a, main > ul a {
