@@ -5,8 +5,8 @@ menu_position: 2
 
 %ul.galleria
 	= list_of @item.children.sort_by &:path do |image|
-		%a{ href: image.path }
-			%img{ src: image.path(rep: :thumbnail) }
+		%a{ href: image.path(rep: :preview) }
+			%img{ src: image.path(rep: :thumbnail), data: { big: image.path } }
 
 :coffee
 	Galleria.loadTheme '/galleria/themes/classic/galleria.classic.min.js'
