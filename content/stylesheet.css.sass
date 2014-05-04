@@ -26,6 +26,13 @@ main
 	p
 		text-align: justify
 
+		a
+			text-decoration:     none
+			font-weight:         bold
+
+			&:hover
+				text-decoration: underline
+
 	.galleria
 		width:   800px
 		height:  600px
@@ -35,15 +42,8 @@ main
 
 nav
 	position: fixed
-	top:      1em
-	left:     0
 	width:    15%
 	margin:   0 20px
-
-	font:
-		size:    150%
-		family:  sans-serif
-		variant: small-caps
 
 	line-height: 1.5
 
@@ -51,18 +51,47 @@ nav
 		margin:  0
 		padding: 0
 
-	li
-		list-style:  none
-		text-align:  right
-		font-weight: bold
+		&:hover a:focus
+			&::after
+				display: none
+			&:hover::after
+				display: inherit
 
-		&:first-child
-			font:
-				size: 150%
+	li
+		list-style: none
 
 		a
 			text-decoration: none
 			font-weight:     normal
+
+	body > &
+		top:  1em
+		left: 0
+
+		font:
+			size:    150%
+			variant: small-caps
+
+		li
+			text-align:  right
+			font-weight: bold
+
+			&:first-child
+				font:
+					size: 150%
+
+				a
+					&:hover, &:focus
+						&::after
+							font-size:  67%
+							margin-top: 0.5em
+
+			a
+				&:hover, &:focus
+					&::after
+						content:     '←'
+						position:    absolute
+						margin-left: 0.5em
 
 
 footer
