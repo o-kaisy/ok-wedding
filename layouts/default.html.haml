@@ -63,3 +63,6 @@
 					$ "<a href='#\#{link.name}'>\#{link.text}</a>"
 				else
 					$ "<span>\#{$(header).text()}</span>"
+
+			unless $('main > nav a')[0]
+				$('main > nav').hide()

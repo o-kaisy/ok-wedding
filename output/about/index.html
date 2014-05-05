@@ -108,6 +108,10 @@
           return container = $('<li></li>').appendTo(container).append(link ? $("<a href='#" + link.name + "'>" + link.text + "</a>") : $("<span>" + ($(header).text()) + "</span>"));
         });
       
+        if (!$('main > nav a')[0]) {
+          $('main > nav').hide();
+        }
+      
       }).call(this);
     </script>
   </body>
