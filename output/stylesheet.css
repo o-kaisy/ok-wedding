@@ -17,7 +17,7 @@ body {
   font-family: "Linux Biolinum";
   font-size: 14pt; }
 
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+small {
   display: block; }
 
 a[href] {
@@ -25,6 +25,11 @@ a[href] {
 
 small {
   color: gray; }
+
+span.price, span.time {
+  font-weight: bold; }
+  span.price .value, span.time .value {
+    font-size: 125%; }
 
 main {
   margin: 0 20%; }

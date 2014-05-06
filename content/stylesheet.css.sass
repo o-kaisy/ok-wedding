@@ -25,15 +25,21 @@ body
 		size:   14pt
 
 
-h1, h2, h3, h4, h5, h6
-	small
-		display: block
+small
+	display: block
 
 a[href]
 	color: goldenRod
 
 small
 	color: gray
+
+span
+	&.price, &.time
+		font-weight:   bold
+		.value
+			font-size: 125%
+		.unit
 
 
 header
