@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <title>
-      Фотосессия - Свадебное фото - Москва - Оксана Красникова
+      О съемке - Свадебное фото - Москва - Оксана Красникова
     </title>
     <link href='/stylesheet.css' rel='stylesheet'>
     <link href='/favicon.ico' rel='icon'>
@@ -14,7 +14,7 @@
   <body>
     <header></header>
     <main class='process'>
-      <h1>Фотосессия</h1>
+      <h1>О съемке</h1>
       <nav></nav>
       <p>
         Можно выделить несколько этапов, из которых складывается удачная свадебная съемка.
@@ -122,7 +122,12 @@
             О фотографе
           </a>
         </li>
-        <li>Фотосессия</li>
+        <li>О съемке</li>
+        <li>
+          <a href='/gifts/'>
+            Сувениры
+          </a>
+        </li>
         <li>
           <a href='/tips/'>
             Советы
@@ -145,11 +150,11 @@
     <script>
       (function() {
         var container, container_level;
-
+      
         container = $('main > nav');
-
+      
         container_level = 0;
-
+      
         $('h2, h3').each(function(i, header) {
           var level, link, _i, _ref;
           level = parseInt(header.nodeName.replace(/\D+/g, ''));
@@ -165,11 +170,11 @@
           container_level = level;
           return container = $('<li></li>').appendTo(container).append(link ? $("<a href='#" + link.name + "'>" + link.text + "</a>") : $("<span>" + ($(header).text()) + "</span>"));
         });
-
+      
         if (!$('main > nav a')[0]) {
           $('main > nav').hide();
         }
-
+      
       }).call(this);
     </script>
   </body>

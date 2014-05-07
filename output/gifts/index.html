@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang='ru'>
+  <head>
+    <meta charset='utf-8'>
+    <title>
+      Сувениры - Свадебное фото - Москва - Оксана Красникова
+    </title>
+    <link href='/stylesheet.css' rel='stylesheet'>
+    <link href='/favicon.ico' rel='icon'>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src='/galleria/galleria-1.3.5.min.js'></script>
+    <meta content='nanoc 3.6.8' name='generator'>
+  </head>
+  <body>
+    <header></header>
+    <main class='gifts'>
+      <h1>Сувениры</h1>
+      <nav></nav>
+      <p>
+        Имея хорошие фотографии, всегда можно придумать оригинальный и очень милый подарок,
+        который никого не оставит равнодушным. Сувениры с фото можно дарить по любым поводам:
+        день рождения, день св. Валентина, свадебный подарок, подарки гостям и просто на память.
+      </p>
+      <p class='standalone'>
+        Идеи оригинальных фотосувениров:
+      </p>
+      <ul class='grid'>
+        <li>
+          <figure>
+            <img src='chocolate.png'>
+            <figcaption>
+              Шоколад в именной обертке с вашей фотографией
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='plate.png'>
+            <figcaption>
+              Керамическая тарелка
+              с фотографией
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='cup.png'>
+            <figcaption>
+              Кружка
+              с фотографией и текстом: пожеланиями, поздравлениями и подписями
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='calendar.png'>
+            <figcaption>
+              Карманные календарики,
+              в которых можно обозначить памятные для вашей семьи даты
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='toy.png'>
+            <figcaption>
+              Мягкая игрушка
+              с фотографией на мини-футболке — очень милый подарок
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='magnet.png'>
+            <figcaption>
+              Магниты на холодильник
+              станут памятным подарком к любому празднику или событию
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='mirror.png'>
+            <figcaption>
+              Карманное зеркало
+              с фотографией
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='bag.png'>
+            <figcaption>
+              Сумка из ткани
+              с фото-принтом
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='puzzle.png'>
+            <figcaption>
+              Паззл
+              с фотографией
+              <p>
+                Гости уже собрались в ресторане, а свадебный кортеж не подъехал?
+                Сбор паззла с фотографией молодоженов развлечет и увлечет ожидающих.
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='pillow.png'>
+            <figcaption>
+              Подушка
+              с романтичной фотографией
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='t-shirt.png'>
+            <figcaption>
+              Футболка
+              с тематической фотографией и надписью может стать памятным подарком,
+              а также элементом развлекательной программы.
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </main>
+    <nav>
+      <ul>
+        <li>
+          <a href='/'>
+            ⌂
+          </a>
+        </li>
+        <li>
+          <a href='/services/'>
+            Услуги
+          </a>
+        </li>
+        <li>
+          <a href='/portfolio/'>
+            Портфолио
+          </a>
+        </li>
+        <li>
+          <a href='/about/'>
+            О фотографе
+          </a>
+        </li>
+        <li>
+          <a href='/process/'>
+            О съемке
+          </a>
+        </li>
+        <li>Сувениры</li>
+        <li>
+          <a href='/tips/'>
+            Советы
+          </a>
+        </li>
+        <li>
+          <a href='/contacts/'>
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <small class='copyright'>
+        ©
+        2006-2014
+        Оксана Красникова
+      </small>
+    </footer>
+    <script>
+      (function() {
+        var container, container_level;
+      
+        container = $('main > nav');
+      
+        container_level = 0;
+      
+        $('h2, h3').each(function(i, header) {
+          var level, link, _i, _ref;
+          level = parseInt(header.nodeName.replace(/\D+/g, ''));
+          link = $(header).children('a')[0];
+          if (level > container_level) {
+            container = $('<ul></ul>').appendTo(container);
+          } else {
+            console.log(container_level - level);
+            for (i = _i = 0, _ref = 2 * (container_level - level); 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+              console.log(container = container.parent());
+            }
+          }
+          container_level = level;
+          return container = $('<li></li>').appendTo(container).append(link ? $("<a href='#" + link.name + "'>" + link.text + "</a>") : $("<span>" + ($(header).text()) + "</span>"));
+        });
+      
+        if (!$('main > nav a')[0]) {
+          $('main > nav').hide();
+        }
+      
+      }).call(this);
+    </script>
+  </body>
+</html>
