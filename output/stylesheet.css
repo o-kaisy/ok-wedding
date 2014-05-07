@@ -37,6 +37,9 @@ main {
     text-align: center; }
   main p, main dl, main > ol, main > ul {
     text-align: justify; }
+    main p.grid > li, main dl.grid > li, main > ol.grid > li, main > ul.grid > li {
+      float: left;
+      list-style: none; }
     main p a, main dl a, main > ol a, main > ul a {
       text-decoration: none;
       font-weight: bold; }
@@ -45,6 +48,15 @@ main {
   main p.standalone {
     font-size: 150%;
     text-align: center; }
+  main figure {
+    width: 290px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 15px gray;
+    text-align: center; }
+    main figure.standalone {
+      width: 360px;
+      margin: auto; }
   main .galleria {
     width: 800px;
     height: 600px;
@@ -129,6 +141,7 @@ nav {
         font-variant: normal; }
 
 footer {
+  clear: both;
   margin: 2em 20% 1em; }
   footer .copyright {
     font-style: italic; }

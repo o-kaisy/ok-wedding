@@ -54,6 +54,12 @@ main
 	p, dl, > ol, > ul
 		text-align: justify
 
+		&.grid
+			> li
+
+				float:      left
+				list-style: none
+
 		a
 			text-decoration:     none
 			font-weight:         bold
@@ -64,6 +70,19 @@ main
 	p.standalone
 		font-size:  150%
 		text-align: center
+
+	figure
+		width:      290px
+		padding:    20px
+		background: white
+		box-shadow: 0 0 15px gray
+		text-align: center
+
+		&.standalone
+			width:  360px
+			margin: auto
+
+		figcaption
 
 	.galleria
 		width:   800px
@@ -190,6 +209,7 @@ nav
 
 
 footer
+	clear:  both
 	margin: 2em 20% 1em
 
 	.copyright
