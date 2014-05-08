@@ -46,7 +46,10 @@ main {
       main p a:hover, main dl a:hover, main > ol a:hover, main > ul a:hover {
         text-decoration: underline; }
   main p.standalone {
-    font-size: 150%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 125%;
     text-align: center; }
   main figure {
     width: 290px;
