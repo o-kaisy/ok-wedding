@@ -37,9 +37,6 @@ main {
     text-align: center; }
   main p, main dl, main > ol, main > ul {
     text-align: justify; }
-    main p.grid > li, main dl.grid > li, main > ol.grid > li, main > ul.grid > li {
-      float: left;
-      list-style: none; }
     main p a, main dl a, main > ol a, main > ul a {
       text-decoration: none;
       font-weight: bold; }
@@ -51,6 +48,15 @@ main {
     margin-right: auto;
     font-size: 125%;
     text-align: center; }
+  main p.highlight {
+    margin-left: 2em;
+    margin-right: 2em;
+    border-left: 4px solid goldenrod;
+    padding-left: 0.5em;
+    font-weight: bold; }
+  main ul.grid > li {
+    float: left;
+    list-style: none; }
   main figure {
     width: 290px;
     padding: 20px;

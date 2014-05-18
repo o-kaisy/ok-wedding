@@ -54,12 +54,6 @@ main
 	p, dl, > ol, > ul
 		text-align: justify
 
-		&.grid
-			> li
-
-				float:      left
-				list-style: none
-
 		a
 			text-decoration:     none
 			font-weight:         bold
@@ -74,6 +68,20 @@ main
 			right:  auto
 		font-size:  125%
 		text-align: center
+
+	p.highlight
+		margin:
+			left:     2em
+			right:    2em
+		border-left:  4px solid goldenrod
+		padding-left: 0.5em
+		font-weight:  bold
+
+	ul.grid
+		> li
+
+			float: left
+			list-style: none
 
 	figure
 		width:      290px
