@@ -107,11 +107,10 @@ main {
 
 nav {
   position: fixed;
-  width: 15%;
-  margin: 0 20px;
+  width: 20%;
   line-height: 1.5; }
   nav ul {
-    margin: 0;
+    margin: 0 0.5rem;
     padding: 0; }
     nav ul:hover a:focus::after {
       display: none; }
@@ -127,7 +126,10 @@ nav {
     left: 0;
     font-size: 150%;
     font-variant: small-caps; }
+    body > nav ul {
+      margin-right: 1rem; }
     body > nav li {
+      padding-right: 2.75rem;
       text-align: right;
       font-weight: bold; }
       body > nav li:first-child {
@@ -142,6 +144,8 @@ nav {
   main > nav {
     top: 3em;
     right: 0; }
+    main > nav ul {
+      margin-left: 1rem; }
     main > nav li {
       color: gray;
       margin-left: 1em; }

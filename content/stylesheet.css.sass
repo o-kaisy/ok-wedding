@@ -149,13 +149,12 @@ main
 
 nav
 	position: fixed
-	width:    15%
-	margin:   0 20px
+	width:    20%
 
 	line-height: 1.5
 
 	ul
-		margin:  0
+		margin:  0 0.5rem
 		padding: 0
 
 		&:hover a:focus
@@ -179,9 +178,14 @@ nav
 			size:    150%
 			variant: small-caps
 
+		ul
+			margin-right: 1rem
+
 		li
-			text-align:  right
-			font-weight: bold
+			padding-right: 2.75rem
+
+			text-align:    right
+			font-weight:   bold
 
 			&:first-child
 				font:
@@ -203,6 +207,9 @@ nav
 	main > &
 		top:   3em
 		right: 0
+
+		ul
+			margin-left: 1rem
 
 		li
 			color: gray
