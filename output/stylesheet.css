@@ -79,33 +79,34 @@ main {
     main .galleria .galleria-container {
       background: white;
       box-shadow: 0 0 15px gray; }
-      main .galleria .galleria-container .galleria-image-nav {
+      main .galleria .galleria-container.notouch .galleria-image-nav {
         margin-left: -10px;
         margin-right: -10px;
         padding-left: 10px;
         padding-right: 10px; }
-        main .galleria .galleria-container .galleria-image-nav-left, main .galleria .galleria-container .galleria-image-nav-right {
+        main .galleria .galleria-container.notouch .galleria-image-nav-left, main .galleria .galleria-container.notouch .galleria-image-nav-right {
           width: 60px; }
-        main .galleria .galleria-container .galleria-image-nav-left {
+        main .galleria .galleria-container.notouch .galleria-image-nav-left {
           border-radius: 0 50% 50% 0;
           background-position: 10px 46px; }
-        main .galleria .galleria-container .galleria-image-nav-right {
+        main .galleria .galleria-container.notouch .galleria-image-nav-right {
           border-radius: 50% 0 0 50%;
           background-position: -264px 46px; }
-      main .galleria .galleria-container .galleria-carousel .galleria-image {
+      main .galleria .galleria-container.notouch .galleria-carousel .galleria-image {
         border: none; }
-      main .galleria .galleria-container .galleria-carousel .galleria-thumb-nav-left {
+      main .galleria .galleria-container.notouch .galleria-carousel .galleria-thumb-nav-left {
         border-radius: 50% 0 0 50%; }
-      main .galleria .galleria-container .galleria-carousel .galleria-thumb-nav-right {
+      main .galleria .galleria-container.notouch .galleria-carousel .galleria-thumb-nav-right {
         border-radius: 0 50% 50% 0; }
-      main .galleria .galleria-container .galleria-image-nav-left, main .galleria .galleria-container .galleria-image-nav-right, main .galleria .galleria-container .galleria-thumb-nav-left, main .galleria .galleria-container .galleria-thumb-nav-right {
+      main .galleria .galleria-container.notouch .galleria-image-nav-left, main .galleria .galleria-container.notouch .galleria-image-nav-right, main .galleria .galleria-container.notouch .galleria-thumb-nav-left, main .galleria .galleria-container.notouch .galleria-thumb-nav-right {
         background-color: black; }
-        main .galleria .galleria-container .galleria-image-nav-left:hover, main .galleria .galleria-container .galleria-image-nav-right:hover, main .galleria .galleria-container .galleria-thumb-nav-left:hover, main .galleria .galleria-container .galleria-thumb-nav-right:hover {
+        main .galleria .galleria-container.notouch .galleria-image-nav-left:hover, main .galleria .galleria-container.notouch .galleria-image-nav-right:hover, main .galleria .galleria-container.notouch .galleria-thumb-nav-left:hover, main .galleria .galleria-container.notouch .galleria-thumb-nav-right:hover {
           opacity: 0.7; }
   main.index .galleria-thumbnails-container {
     display: none; }
 
 nav {
+  clear: both;
   position: fixed;
   width: 20%;
   line-height: 1.5; }
@@ -163,3 +164,67 @@ footer {
   margin: 2em 20% 1em; }
   footer .copyright {
     font-style: italic; }
+
+@media (max-width: 1150px) {
+  main, footer {
+    margin-left: 25%;
+    margin-right: 2rem; }
+
+  nav {
+    width: 25%; }
+    main > nav {
+      display: none; } }
+@media (max-width: 1100px) {
+  main, footer {
+    margin-left: 17.5%; }
+
+  nav {
+    width: 17.5%; }
+    body > nav li {
+      padding-right: 0; }
+      body > nav li a::after {
+        display: none !important; }
+      body > nav li a:hover {
+        text-decoration: underline; } }
+@media (max-width: 1050px) {
+  main, footer {
+    margin-left: 15%; }
+
+  nav {
+    width: 15%; }
+    body > nav {
+      font-size: 120%; } }
+@media (max-width: 1000px) {
+  body {
+    font-size: inherit; }
+
+  main, footer {
+    margin-left: 2rem; }
+
+  main p.standalone {
+    width: 90%; }
+  main p.highlight {
+    margin-left: 1em;
+    margin-right: 1em; }
+  main .galleria {
+    width: 110%;
+    height: 75vw;
+    margin: 0 -5%; }
+
+  nav {
+    position: inherit;
+    width: 100%;
+    margin: 1rem 0; }
+    body > nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0; }
+      body > nav ul li {
+        float: left;
+        margin: auto;
+        padding: 0 0.5rem; }
+        body > nav ul li:first-child {
+          font-size: inherit; }
+
+  footer {
+    margin-top: 1em; } }
