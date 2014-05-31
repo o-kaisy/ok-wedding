@@ -41,6 +41,14 @@ span
 			font-size: 125%
 		.unit
 
+figure
+	padding: 2ex
+	background: white
+	box-shadow: 0 0 15px gray
+	text-align: center
+
+	figcaption
+
 
 header
 
@@ -78,23 +86,19 @@ main
 		font-weight:  bold
 
 	ul.grid
-		> li
+		display:  flex
+		flex:
+			wrap: wrap
+		padding:  0
 
-			float: left
+		> li
+			float:      left
+			margin:     0 auto 1rem
 			list-style: none
 
-	figure
-		width:      290px
-		padding:    20px
-		background: white
-		box-shadow: 0 0 15px gray
-		text-align: center
-
-		&.standalone
-			width:  360px
-			margin: auto
-
-		figcaption
+	&.gifts figure
+		width:  290px
+		margin: 0
 
 	.galleria
 		width:   800px
