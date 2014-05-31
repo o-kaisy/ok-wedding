@@ -111,20 +111,20 @@
         </li>
         <li>
           <figure>
-            <img src='pillow.png'>
-            <figcaption>
-              Подушка
-              с романтичной фотографией
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
             <img src='t-shirt.png'>
             <figcaption>
               Футболка
               с тематической фотографией и надписью может стать памятным подарком,
               а также элементом развлекательной программы.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src='pillow.png'>
+            <figcaption>
+              Подушка
+              с романтичной фотографией
             </figcaption>
           </figure>
         </li>
@@ -180,11 +180,11 @@
     <script>
       (function() {
         var container, container_level;
-      
+
         container = $('main > nav');
-      
+
         container_level = 0;
-      
+
         $('h2, h3').each(function(i, header) {
           var level, link, _i, _ref;
           level = parseInt(header.nodeName.replace(/\D+/g, ''));
@@ -200,11 +200,11 @@
           container_level = level;
           return container = $('<li></li>').appendTo(container).append(link ? $("<a href='#" + link.name + "'>" + link.text + "</a>") : $("<span>" + ($(header).text()) + "</span>"));
         });
-      
+
         if (!$('main > nav a')[0]) {
           $('main > nav').hide();
         }
-      
+
       }).call(this);
     </script>
   </body>
