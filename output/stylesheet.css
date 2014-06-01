@@ -14,6 +14,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #faf3d2;
+  background-image: url("/images/background-l.png"), url("/images/background-r.png");
+  background-repeat: repeat-y, repeat-y;
+  background-position: left, right;
   font-family: "Linux Biolinum";
   font-size: 14pt; }
 
